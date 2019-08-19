@@ -1,0 +1,18 @@
+[package]
+name = "ow-arcade-lambda"
+version = "0.1.0"
+authors = ["Scott Schroeder <scottschroeder@sent.com>"]
+edition = "2018"
+
+[[bin]]
+name = "bootstrap"
+path = "src/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+lambda_runtime = "0.1"
+serde = "1.0.80"
+serde_derive = "1.0.80"
+serde_json = "1.0.33"

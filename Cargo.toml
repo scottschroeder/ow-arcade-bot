@@ -1,0 +1,13 @@
+[workspace]
+
+members = [
+    "discord",
+    "overwatch",
+    "ow_arcade_cli",
+    "ow_arcade_watcher",
+    "ow_arcade_lambda",
+    "stupids3",
+]
+
+[profile.release]
+lto = false

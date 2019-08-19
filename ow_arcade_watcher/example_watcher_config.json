@@ -1,0 +1,22 @@
+{
+  "watcher": {
+    "rooms": {
+      "1234": {
+        "comment": "room 1",
+        "gamemodes": [
+          1,
+          2,
+          3
+        ]
+      },
+      "5678": {
+        "comment": "room 2",
+        "gamemodes": [
+          3,
+          4,
+          5
+        ]
+      }
+    }
+  }
+}

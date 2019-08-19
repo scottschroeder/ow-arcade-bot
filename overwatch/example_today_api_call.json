@@ -1,0 +1,38 @@
+{
+    "updated_at": "2019-08-15 02:02:10",
+    "tile_large": {
+        "id": 25,
+        "name": "No Limits",
+        "players": "6v6",
+        "code": "nolimits"
+    },
+    "tile_weekly_1": {
+        "id": 27,
+        "name": "Petra Deathmatch",
+        "players": "8 Player FFA",
+        "code": "petradeathmatch"
+    },
+    "tile_daily": {
+        "id": 9,
+        "name": "CTF: Ayutthaya Only",
+        "players": "6v6",
+        "code": "ctfayutthaya"
+    },
+    "tile_weekly_2": {
+        "id": 29,
+        "name": "Team Deathmatch",
+        "players": "4v4",
+        "code": "teamdeathmatch"
+    },
+    "tile_permanent": {
+        "id": 24,
+        "name": "Mystery Heroes",
+        "players": "6v6",
+        "code": "mysteryheroes"
+    },
+    "by_user": {
+        "id": 57164349,
+        "battletag": "Chaosx#1390",
+        "avatar": "http:\/\/overwatcharcade.today\/users\/default.jpg"
+    }
+}
