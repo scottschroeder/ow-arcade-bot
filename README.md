@@ -1,8 +1,10 @@
 # ow-arcade-bot
 
 ## Update the lambda
+```bash
 cargo build --release --target x86_64-unknown-linux-musl --bin bootstrap
 zip -j rust.zip ./target/x86_64-unknown-linux-musl/release/bootstrap
+```
 
 ## Update the config file
 ```bash
