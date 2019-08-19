@@ -12,5 +12,5 @@ serde = { version = "1", features = ["derive"]}
 log = "0.4"
 failure = "0.1.5"
 serde_json = "1.0"
-reqwest = "0.9.19"
+reqwest = {version="0.9.19", default-features = false, features=["rustls-tls"]}
 stupids3 = {path = "../stupids3"}

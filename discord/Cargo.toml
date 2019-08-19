@@ -9,5 +9,5 @@ edition = "2018"
 [dependencies]
 log = "0.4"
 failure = "0.1.5"
-serenity = "0.6.3"
+serenity = {version ="0.6.3", features=["rustls_backend"]}
 overwatch = {path = "../overwatch"}
