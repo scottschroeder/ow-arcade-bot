@@ -1,13 +1,12 @@
-use failure::format_err;
 use std::error::Error;
 
 use lambda_runtime::{error::HandlerError, lambda, Context};
-use log::{self, error};
+use log::{self};
 use serde_derive::{Deserialize, Serialize};
 
 use ow_arcade_watcher;
-use ow_arcade_watcher::watch_and_update;
 use ow_arcade_watcher::settings::load;
+use ow_arcade_watcher::watch_and_update;
 
 #[derive(Deserialize)]
 struct CustomEvent {
@@ -25,11 +24,11 @@ fn main() -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-fn my_handler(e: CustomEvent, c: Context) -> Result<CustomOutput, HandlerError> {
+fn my_handler(_e: CustomEvent, _c: Context) -> Result<CustomOutput, HandlerError> {
     let cfg = load()?;
     watch_and_update(&cfg)?;
     Ok(CustomOutput {
-        message: format!("success"),
+        message: "success".to_string(),
     })
 }
 

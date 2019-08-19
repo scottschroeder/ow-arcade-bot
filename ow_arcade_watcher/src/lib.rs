@@ -26,7 +26,6 @@ pub fn watch_and_update(cfg: &ArcadeBotConfig) -> Result<(), failure::Error> {
     Ok(())
 }
 
-
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct DynamicConfig {
     pub watcher: WatcherConfig,
