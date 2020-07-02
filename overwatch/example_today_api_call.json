@@ -1,38 +1,59 @@
 {
-    "updated_at": "2019-08-15 02:02:10",
-    "tile_large": {
-        "id": 25,
-        "name": "No Limits",
-        "players": "6v6",
-        "code": "nolimits"
+    "created_at": "2020-07-02T18:13:42+00:00",
+    "is_today": true,
+    "user": {
+        "battletag": "Redhawk#11341",
+        "avatar": "https:\/\/overwatcharcade.today\/img\/avatars\/brigitte.jpg"
     },
-    "tile_weekly_1": {
-        "id": 27,
-        "name": "Petra Deathmatch",
-        "players": "8 Player FFA",
-        "code": "petradeathmatch"
-    },
-    "tile_daily": {
-        "id": 9,
-        "name": "CTF: Ayutthaya Only",
-        "players": "6v6",
-        "code": "ctfayutthaya"
-    },
-    "tile_weekly_2": {
-        "id": 29,
-        "name": "Team Deathmatch",
-        "players": "4v4",
-        "code": "teamdeathmatch"
-    },
-    "tile_permanent": {
-        "id": 24,
-        "name": "Mystery Heroes",
-        "players": "6v6",
-        "code": "mysteryheroes"
-    },
-    "by_user": {
-        "id": 57164349,
-        "battletag": "Chaosx#1390",
-        "avatar": "http:\/\/overwatcharcade.today\/users\/default.jpg"
+    "modes": {
+        "tile_1": {
+            "id": 12,
+            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/fcb95a837260d19026f521a3cc420d7b.jpg",
+            "name": "Ch\u00e2teau Deathmatch",
+            "players": "8 Player FFA",
+            "label": null
+        },
+        "tile_2": {
+            "id": 61,
+            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/b9dcf401a492bc9edaf96c7b83c8a10c.jpg",
+            "name": "Team Deathmatch",
+            "players": "4v4",
+            "label": "Daily"
+        },
+        "tile_3": {
+            "id": 25,
+            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/f5fbb8508bed10536998423ac92ee461.jpg",
+            "name": "Elimination",
+            "players": "6v6",
+            "label": "Daily"
+        },
+        "tile_4": {
+            "id": 51,
+            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/e20ebdb332ebd018da0704d1ab88ac4c.jpg",
+            "name": "Quick Play Classic",
+            "players": "6v6",
+            "label": null
+        },
+        "tile_5": {
+            "id": 62,
+            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/da5533b1df3f2dbf78f47a71b115be43.jpg",
+            "name": "Total Mayhem",
+            "players": "6v6",
+            "label": "Daily"
+        },
+        "tile_6": {
+            "id": 28,
+            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/d73c988838464ea6701303ba73b7f96a.jpg",
+            "name": "Hero Gauntlet",
+            "players": "8 Player FFA",
+            "label": "Daily"
+        },
+        "tile_7": {
+            "id": 46,
+            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/79eba70d1695e915a810f1a41d0bb756.jpg",
+            "name": "Mystery Heroes",
+            "players": "6v6",
+            "label": null
+        }
     }
 }

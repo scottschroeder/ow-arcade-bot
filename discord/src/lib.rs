@@ -35,7 +35,7 @@ pub fn send_gamemode(client: &Client, channel: u64, gm: &GameMode) -> Result<(),
             e.color(Colour::from_rgb(0x07, 0x85, 0x3e));
             e.field("Players", &gm.players, true);
             if let Some(ref img) = gm.image {
-                e.image(&img.normal);
+                e.image(&img.url);
             }
             e
         })

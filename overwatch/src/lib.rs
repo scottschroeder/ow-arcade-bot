@@ -50,7 +50,7 @@ pub mod arcade_watcher {
 
         pub fn update(&mut self) -> Result<HashMap<u64, Vec<GameMode>>, failure::Error> {
             let arcade = fetch_today()?;
-            let current = arcade.tiles.values().map(|gm| gm.id);
+            let current = arcade.modes.values().map(|gm| gm.id);
             let (added, removed) = self.state.mode_diff(current.clone())?;
             self.state.set_modes(current)?;
 
@@ -167,12 +167,10 @@ pub mod owatapi {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Arcade {
-    #[serde(with = "owat_api_date")]
-    updated_at: chrono::DateTime<Utc>,
-    //updated_at: String,
-    #[serde(flatten)]
-    tiles: HashMap<String, GameMode>,
-    by_user: User,
+    created_at: chrono::DateTime<Utc>,
+    is_today: bool,
+    //#[serde(flatten)]
+    modes: HashMap<String, GameMode>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -187,7 +185,6 @@ pub struct GameMode {
     id: u32,
     pub name: String,
     pub players: String,
-    code: String,
     pub image: Option<GameImage>,
 }
 
@@ -196,14 +193,8 @@ pub fn example_gamemode(wimg: bool) -> GameMode {
         id: 0,
         name: "Example VS Mode".into(),
         players: "0v0".to_string(),
-        code: "examplevsmode".to_string(),
         image: if wimg {
-            Some(GameImage {
-                normal: "http://overwatcharcade.today/img/modes/6v6competitiveelimination.jpg"
-                    .to_string(),
-                large: "http://overwatcharcade.today/img/modes_large/6v6competitiveelimination.jpg"
-                    .to_string(),
-            })
+            Some(GameImage{url: "http://overwatcharcade.today/img/modes/6v6competitiveelimination.jpg".to_string()})
         } else {
             None
         },
@@ -215,7 +206,7 @@ use std::fmt;
 impl fmt::Display for GameMode {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         if let Some(ref img) = self.image {
-            write!(f, "{} {} {}", self.players, self.name, img.normal)
+            write!(f, "{} {} {}", self.players, self.name, img.url)
         } else {
             write!(f, "{} {}", self.players, self.name)
         }
@@ -223,33 +214,10 @@ impl fmt::Display for GameMode {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(transparent)]
 pub struct GameImage {
-    pub normal: String,
-    pub large: String,
-}
-
-mod owat_api_date {
-    use chrono::{DateTime, TimeZone, Utc};
-    use serde::{self, Deserialize, Deserializer, Serializer};
-
-    const FORMAT: &str = "%Y-%m-%d %H:%M:%S";
-
-    pub fn serialize<S>(date: &DateTime<Utc>, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: Serializer,
-    {
-        let s = format!("{}", date.format(FORMAT));
-        serializer.serialize_str(&s)
-    }
-
-    pub fn deserialize<'de, D>(deserializer: D) -> Result<DateTime<Utc>, D::Error>
-    where
-        D: Deserializer<'de>,
-    {
-        let s = String::deserialize(deserializer)?;
-        Utc.datetime_from_str(&s, FORMAT)
-            .map_err(serde::de::Error::custom)
-    }
+    #[serde(flatten)]
+    pub url: String,
 }
 
 #[cfg(test)]
