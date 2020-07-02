@@ -77,10 +77,13 @@ fn setup_logger(level: u64) {
         "hyper",
         "mio",
         "tokio_core",
+        "tokio_io",
         "tokio_reactor",
         "tokio_threadpool",
         "fuse::request",
         "rusoto_core",
+        "rustls",
+        "h2",
         "want",
     ];
 

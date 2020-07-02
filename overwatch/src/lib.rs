@@ -134,15 +134,15 @@ pub mod owatapi {
     use crate::GameMode;
     use reqwest;
 
-    const OWAPI_BASE: &str = "https://overwatcharcade.today/api";
-    pub const OWTODAY_URL: &str = "https://overwatcharcade.today/";
+    const OWAPI_BASE: &str = "https://overwatcharcade.today/api/overwatch";
+    pub const OWTODAY_URL: &str = "https://overwatcharcade.today/overwatch";
 
     pub fn fetch_today() -> Result<Arcade, failure::Error> {
         Ok(reqwest::get(&format!("{}/today", OWAPI_BASE))?.json()?)
     }
 
     pub fn fetch_gamemodes() -> Result<Vec<GameMode>, failure::Error> {
-        Ok(reqwest::get(&format!("{}/gamemodes", OWAPI_BASE))?.json()?)
+        Ok(reqwest::get(&format!("{}/arcademodes", OWAPI_BASE))?.json()?)
     }
 
     #[derive(Debug, Default)]
