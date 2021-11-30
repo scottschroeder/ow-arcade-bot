@@ -4,17 +4,35 @@
       "1234": {
         "comment": "room 1",
         "gamemodes": [
-          1,
-          2,
-          3
+          {
+            "name": "g1",
+            "players": "6v6"
+          },
+          {
+            "name": "g2",
+            "players": "3v3"
+          },
+          {
+            "name": "g3",
+            "players": "some other text"
+          }
         ]
       },
       "5678": {
         "comment": "room 2",
         "gamemodes": [
-          3,
-          4,
-          5
+          {
+            "name": "g3",
+            "players": "some other text"
+          },
+          {
+            "name": "g2",
+            "players": "6v6"
+          },
+          {
+            "name": "g1",
+            "players": "some other text"
+          }
         ]
       }
     }

@@ -34,12 +34,11 @@ pub struct DynamicConfig {
 #[cfg(test)]
 mod test {
     use crate::DynamicConfig;
-    use serde_json;
 
     const EXAMPLE_CFG: &str = include_str!("../example_watcher_config.json");
 
     #[test]
-    fn deserialize_today() {
+    fn deserialize_config() {
         let _a: DynamicConfig = serde_json::from_str(EXAMPLE_CFG).unwrap();
     }
 }

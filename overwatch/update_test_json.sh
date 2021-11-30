@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl -v https://overwatcharcade.today/api/overwatch/today > example_today_api_call.json
+curl -L -v https://overwatcharcade.today/api/v1/overwatch/today | jq . > example_today_api_call.json

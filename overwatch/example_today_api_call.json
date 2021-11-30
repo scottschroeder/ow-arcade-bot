@@ -1,59 +1,67 @@
 {
-    "created_at": "2020-07-02T18:13:42+00:00",
-    "is_today": true,
-    "user": {
-        "battletag": "Redhawk#11341",
-        "avatar": "https:\/\/overwatcharcade.today\/img\/avatars\/brigitte.jpg"
-    },
-    "modes": {
-        "tile_1": {
-            "id": 12,
-            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/fcb95a837260d19026f521a3cc420d7b.jpg",
-            "name": "Ch\u00e2teau Deathmatch",
-            "players": "8 Player FFA",
-            "label": null
-        },
-        "tile_2": {
-            "id": 61,
-            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/b9dcf401a492bc9edaf96c7b83c8a10c.jpg",
-            "name": "Team Deathmatch",
-            "players": "4v4",
-            "label": "Daily"
-        },
-        "tile_3": {
-            "id": 25,
-            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/f5fbb8508bed10536998423ac92ee461.jpg",
-            "name": "Elimination",
-            "players": "6v6",
-            "label": "Daily"
-        },
-        "tile_4": {
-            "id": 51,
-            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/e20ebdb332ebd018da0704d1ab88ac4c.jpg",
-            "name": "Quick Play Classic",
-            "players": "6v6",
-            "label": null
-        },
-        "tile_5": {
-            "id": 62,
-            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/da5533b1df3f2dbf78f47a71b115be43.jpg",
-            "name": "Total Mayhem",
-            "players": "6v6",
-            "label": "Daily"
-        },
-        "tile_6": {
-            "id": 28,
-            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/d73c988838464ea6701303ba73b7f96a.jpg",
-            "name": "Hero Gauntlet",
-            "players": "8 Player FFA",
-            "label": "Daily"
-        },
-        "tile_7": {
-            "id": 46,
-            "image": "https:\/\/overwatcharcade.today\/img\/gamemodes\/79eba70d1695e915a810f1a41d0bb756.jpg",
-            "name": "Mystery Heroes",
-            "players": "6v6",
-            "label": null
-        }
+  "data": {
+    "isToday": true,
+    "modes": [
+      {
+        "name": "Château Deathmatch",
+        "players": "8 Player FFA",
+        "description": "Climb to the top of the scoreboard. The deadliest hero wins.",
+        "image": "https://api.overwatcharcade.today/images/overwatch/arcademodes/FCB95A837260D19026F521A3CC420D7B.jpg",
+        "label": "Daily"
+      },
+      {
+        "name": "Team Deathmatch",
+        "players": "4v4",
+        "description": "Climb to the top of the scoreboard. The deadliest team wins.",
+        "image": "https://api.overwatcharcade.today/images/overwatch/arcademodes/B9DCF401A492BC9EDAF96C7B83C8A10C.jpg",
+        "label": "Daily"
+      },
+      {
+        "name": "Elimination",
+        "players": "6v6",
+        "description": "Compete as a team of six players in a series of fights, where successful heroes are removed from later rounds.",
+        "image": "https://api.overwatcharcade.today/images/overwatch/arcademodes/F5FBB8508BED10536998423AC92EE461.jpg",
+        "label": "Daily"
+      },
+      {
+        "name": "Quick Play Classic",
+        "players": "6v6",
+        "description": "Defeat the enemy team with no role limits on hero selection.",
+        "image": "https://api.overwatcharcade.today/images/overwatch/arcademodes/E20EBDB332EBD018DA0704D1AB88AC4C.jpg",
+        "label": null
+      },
+      {
+        "name": "Total Mayhem",
+        "players": "6v6",
+        "description": "Power up and embrace the chaos.",
+        "image": "https://api.overwatcharcade.today/images/overwatch/arcademodes/DA5533B1DF3F2DBF78F47A71B115BE43.jpg",
+        "label": "Daily"
+      },
+      {
+        "name": "Hero Gauntlet",
+        "players": "8 Player FFA",
+        "description": "Play through a set list of heroes in a deathmatch environment. Each time you get a kill, you swap to the next hero. The first player to get through their list wins.",
+        "image": "https://api.overwatcharcade.today/images/overwatch/arcademodes/D73C988838464EA6701303BA73B7F96A.jpg",
+        "label": "Daily"
+      },
+      {
+        "name": "Mystery Heroes",
+        "players": "6v6",
+        "description": "Defeat the enemy team with every player using heroes that randomly change upon respawn.",
+        "image": "https://api.overwatcharcade.today/images/overwatch/arcademodes/79EBA70D1695E915A810F1A41D0BB756.jpg",
+        "label": null
+      }
+    ],
+    "createdAt": "2021-11-30T00:00:54.6133795Z",
+    "contributor": {
+      "username": "Redhawk",
+      "avatar": "https://api.overwatcharcade.today/images/profiles/thkhz021.53b.jpg",
+      "registeredAt": "2020-05-03T16:09:00",
+      "group": "SuperContributor"
     }
+  },
+  "success": true,
+  "message": null,
+  "statusCode": 200,
+  "time": "2021-11-30T00:21:19.6082005+00:00"
 }
