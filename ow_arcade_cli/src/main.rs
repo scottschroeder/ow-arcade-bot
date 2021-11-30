@@ -2,11 +2,10 @@
 extern crate log;
 
 use clap::{App, Arg};
-use failure;
+
 use failure::bail;
 
 use ow_arcade_watcher::settings::load;
-use pretty_env_logger;
 
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
@@ -40,8 +39,7 @@ fn run() -> Result<(), failure::Error> {
 
 mod util {
     use serde::de::DeserializeOwned;
-    use std::fs;
-    use std::path::Path;
+    use std::{fs, path::Path};
 
     pub fn open_json_obj<D: DeserializeOwned, P: AsRef<Path>>(
         path: P,

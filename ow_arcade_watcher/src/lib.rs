@@ -1,9 +1,9 @@
 use crate::settings::ArcadeBotConfig;
 
-use discord;
-
-use overwatch::arcade_state::S3State;
-use overwatch::arcade_watcher::{Watcher, WatcherConfig};
+use overwatch::{
+    arcade_state::S3State,
+    arcade_watcher::{Watcher, WatcherConfig},
+};
 use serde::{Deserialize, Serialize};
 use stupids3::get_obj;
 

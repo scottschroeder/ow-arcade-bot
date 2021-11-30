@@ -1,11 +1,7 @@
 use std::fmt::Display;
 
-use overwatch::owatapi::OWTODAY_URL;
-use overwatch::GameMode;
-use serenity::builder::CreateMessage;
-use serenity::model::id::ChannelId;
-use serenity::prelude::*;
-use serenity::utils::Colour;
+use overwatch::{owatapi::OWTODAY_URL, GameMode};
+use serenity::{builder::CreateMessage, model::id::ChannelId, prelude::*, utils::Colour};
 
 struct Handler;
 impl EventHandler for Handler {}

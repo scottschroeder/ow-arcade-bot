@@ -1,12 +1,10 @@
 use crate::util::open_json_obj;
 use clap::ArgMatches;
 
-use discord;
-
 use ow_arcade_watcher::{settings::ArcadeBotConfig, watch_and_update, DynamicConfig};
 use stupids3::{get, put};
 
-pub fn watcher(args: &ArgMatches, cfg: &ArcadeBotConfig) -> Result<(), failure::Error> {
+pub fn watcher(_args: &ArgMatches, cfg: &ArcadeBotConfig) -> Result<(), failure::Error> {
     watch_and_update(cfg)
 }
 

@@ -1,6 +1,4 @@
-use crate::arcade_state::ArcadeState;
-use crate::owatapi::{fetch_today};
-use crate::GameMode;
+use crate::{arcade_state::ArcadeState, owatapi::fetch_today, GameMode};
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet};
 
@@ -48,11 +46,13 @@ impl<T: ArcadeState> Watcher<T> {
 
         let mut result = HashMap::new();
         for (room, wadd, _wrem) in self.inner.iter().filter_map(|(room, interested)| {
-            let watched_added = diff.added
+            let watched_added = diff
+                .added
                 .intersection(interested)
                 .cloned()
                 .collect::<HashSet<GameMode>>();
-            let watched_removed = diff.removed
+            let watched_removed = diff
+                .removed
                 .intersection(interested)
                 .cloned()
                 .collect::<HashSet<GameMode>>();
@@ -69,4 +69,3 @@ impl<T: ArcadeState> Watcher<T> {
         Ok(result)
     }
 }
-

@@ -2,7 +2,7 @@
 name = "ow-arcade-lambda"
 version = "0.1.0"
 authors = ["Scott Schroeder <scottschroeder@sent.com>"]
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "bootstrap"

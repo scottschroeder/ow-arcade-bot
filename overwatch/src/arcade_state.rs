@@ -2,14 +2,10 @@ use super::GameMode;
 use std::collections::HashSet;
 use stupids3::{get_obj, put, StupidS3Error};
 
-type GameId<'a> = (&'a str, &'a str);
-type ModeSet<'a> = HashSet<GameId<'a>>;
-
 pub struct GameDiff {
     pub added: HashSet<GameMode>,
     pub removed: HashSet<GameMode>,
 }
-
 
 pub trait ArcadeState {
     fn previous_modes(&self) -> Result<Vec<GameMode>, failure::Error>;
@@ -22,10 +18,7 @@ pub trait ArcadeState {
         modes: impl Iterator<Item = &'a GameMode>,
     ) -> Result<GameDiff, failure::Error> {
         let next = modes.cloned().collect::<HashSet<_>>();
-        let prev = self
-            .previous_modes()?
-            .into_iter()
-            .collect::<HashSet<_>>();
+        let prev = self.previous_modes()?.into_iter().collect::<HashSet<_>>();
         Ok(GameDiff {
             added: next.difference(&prev).cloned().collect(),
             removed: prev.difference(&next).cloned().collect(),

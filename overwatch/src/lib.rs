@@ -1,15 +1,12 @@
 #[macro_use]
 extern crate log;
 
-use std::hash::Hash;
 use chrono::{self, offset::Utc};
 use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
-use std::collections::HashSet;
+use std::hash::Hash;
 
-
-pub mod arcade_watcher;
 pub mod arcade_state;
+pub mod arcade_watcher;
 pub mod owatapi;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -26,7 +23,6 @@ pub struct Arcade {
     created_at: chrono::DateTime<Utc>,
     modes: Vec<GameMode>,
 }
-
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct GameMode {
@@ -85,7 +81,6 @@ pub struct GameImage {
 #[cfg(test)]
 mod test {
     use crate::TodayResponse;
-    use serde_json;
 
     const EXAMPLE_TODAY_API_CALL: &str = include_str!("../example_today_api_call.json");
 

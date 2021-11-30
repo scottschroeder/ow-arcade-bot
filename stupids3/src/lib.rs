@@ -1,8 +1,7 @@
 use failure::Fail;
 use rusoto_core::{ByteStream, Region, RusotoError};
 use rusoto_s3::{GetObjectError, GetObjectRequest, PutObjectRequest, S3Client, S3};
-use serde::de::DeserializeOwned;
-use serde::Serialize;
+use serde::{de::DeserializeOwned, Serialize};
 use std::io::Read;
 
 #[derive(Debug, Fail)]
@@ -47,7 +46,7 @@ fn get_raw<B: AsRef<str>, K: AsRef<str>>(bucket: B, key: K) -> Result<ByteStream
                 error: e.into(),
             },
         })?;
-    let bytes = resp.body.ok_or_else(|| StupidS3Error::ContentMissing)?;
+    let bytes = resp.body.ok_or(StupidS3Error::ContentMissing)?;
     Ok(bytes)
 }
 

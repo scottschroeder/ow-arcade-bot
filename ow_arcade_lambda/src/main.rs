@@ -4,9 +4,7 @@ use lambda_runtime::{error::HandlerError, lambda, Context};
 use log::{self};
 use serde_derive::{Deserialize, Serialize};
 
-use ow_arcade_watcher;
-use ow_arcade_watcher::settings::load;
-use ow_arcade_watcher::watch_and_update;
+use ow_arcade_watcher::{settings::load, watch_and_update};
 
 #[derive(Deserialize)]
 struct CustomEvent {
